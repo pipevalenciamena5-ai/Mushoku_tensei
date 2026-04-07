@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Dijes Personalizados</title>
+    <!-- Fuente elegante de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS para estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de carga -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Cargando tienda de dijes...</p>
+    </div>
+
+    <!-- Barra de navegación para moverse entre secciones -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#musica">Música</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de inicio -->
+    <section id="inicio" class="fade-in">
+        <h1>Bienvenido a nuestra Tienda de Dijes</h1>
+        <p>Descubre dijes personalizados de tus animes y videojuegos favoritos.</p>
+    </section>
+
+    <!-- Reproductor de música en iframe de Spotify -->
+    <section id="musica">
+        <h2>Música de Fondo</h2>
+        <div class="spotify-container">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1WjBKdyRfgpld0BNICStzX?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <p>Reproductor integrado de Spotify. Usa el control de la barra para pausar/reproducir.</p>
+        <p class="nota-musica">Formato embebido: Spotify iframe (no recargas pesadas ni scripts adicionales).</p>
+    </section>
+
+    <!-- Sección de productos -->
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos">
+            <div class="producto anime" data-tipo="anime">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dije de Anime">
+                <h3>Dijes de Anime</h3>
+                <p>Personaliza tu dije con personajes de anime.</p>
+                <button class="seleccionar">Seleccionar</button>
+            </div>
+            <div class="producto videojuego" data-tipo="videojuego">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dije de Videojuego">
+                <h3>Dijes de Videojuegos</h3>
+                <p>Dijes inspirados en tus juegos favoritos.</p>
+                <button class="seleccionar">Seleccionar</button>
+            </div>
+            <div class="producto personalizado" data-tipo="personalizado">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dije Personalizado">
+                <h3>Dijes Personalizados</h3>
+                <p>Crea tu propio diseño único.</p>
+                <button class="seleccionar">Seleccionar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de opciones que aparece dinámicamente -->
+    <section id="opciones" style="display: none;">
+        <h2>Opciones de Personalización</h2>
+        <div id="tipo-dije">
+            <h3>Tipo de Dije</h3>
+            <select id="select-tipo">
+                <option value="estandar">Estándar</option>
+                <option value="personalizado">Personalizado</option>
+            </select>
+        </div>
+        <div id="direccion-envio">
+            <h3>Dirección de Envío</h3>
+            <input type="text" id="direccion" placeholder="Ingresa tu dirección">
+        </div>
+        <button id="continuar">Continuar al Formulario</button>
+    </section>
+
+    <!-- Formulario de envío -->
+    <section id="formulario" style="display: none;">
+        <h2>Formulario de Envío</h2>
+        <form id="form-envio">
+            <label for="tipo-dije-form">Tipo de Dije:</label>
+            <select id="tipo-dije-form">
+                <option value="estandar">Estándar - $10.00</option>
+                <option value="personalizado">Personalizado - $15.00</option>
+            </select>
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" readonly value="$10.00">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono">
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Contáctanos para más información.</p>
+    </section>
+
+    <!-- Footer con información del creador -->
+    <footer>
+        <p>Creado por Andrés Valencia</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript para interacciones -->
+    <script src="script.js"></script>
+</body>
+</html>
